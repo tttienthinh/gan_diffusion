@@ -1,71 +1,119 @@
-# GAN and Diffusion Models Implementation
+# GAN & Diffusion Models: High-Quality Image Generation
 
 ![Realistic Portrait](realistic_portrait.png)
 
-This repository demonstrates a comprehensive exploration of generative models, focusing on both Generative Adversarial Networks (GANs) and Diffusion Models for high-quality image generation.
+Welcome to a comprehensive exploration of state-of-the-art generative models! This repository demonstrates the power of Generative Adversarial Networks (GANs) and Diffusion Models for creating high-quality, diverse, and controllable images. Whether you're a researcher, student, or enthusiast, this project offers hands-on implementations, insightful comparisons, and creative applications.
 
-## Project Overview
+---
 
-This project implements and compares different state-of-the-art generative models with a focus on:
-- Deep Convolutional GANs (DC-GANs)
-- Conditional GANs (cGANs)
-- Denoising Diffusion Probabilistic Models (DDPMs)
-- Pre-trained Stable Diffusion models
+## 🚀 Project Highlights
 
-Each implementation showcases the evolution of generative AI techniques and their capabilities for creating increasingly realistic and controllable images.
+- **Multiple Generative Architectures:** DC-GAN, Conditional GAN (cGAN), Denoising Diffusion Probabilistic Models (DDPM), and Stable Diffusion.
+- **Controllable Generation:** Conditional inputs for targeted outputs (e.g., specific MNIST digits, image-to-image translation).
+- **Creative Applications:** From digit generation to photorealistic portraits and fantasy landscapes.
+- **PyTorch Implementations:** Modular, well-documented code for easy experimentation and extension.
 
-## Key Implementations
+---
+
+## 📦 Table of Contents
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+- [Implemented Models](#implemented-models)
+- [Results](#results)
+- [Technical Details](#technical-details)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Text Prompts](#text-prompts)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Overview
+This project implements and compares cutting-edge generative models, showcasing their evolution and capabilities:
+- **Deep Convolutional GANs (DC-GANs):** Unconditional and conditional digit generation.
+- **Conditional GANs (cGANs):** Image-to-image translation (e.g., facades from segmentation masks).
+- **Diffusion Models (DDPMs):** Progressive denoising for high-fidelity image synthesis.
+- **Stable Diffusion:** Advanced text-to-image generation with prompt engineering.
+
+---
+
+## Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/gan-diffusion.git
+   cd gan-diffusion
+   ```
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Explore the main notebook:**
+   Open [GAN_and_Diffusion.ipynb](GAN_and_Diffusion.ipynb) in Jupyter or Colab to run, modify, and experiment with the models.
+
+---
+
+## Implemented Models
 
 ### 1. DC-GAN for MNIST Generation
-- Custom implementation of Deep Convolutional GAN architecture
-- Training visualization with generator/discriminator loss tracking
-- Conditional generation to control specific digit outputs
+- Custom Deep Convolutional GAN architecture for digit synthesis
+- Real-time visualization of generator/discriminator losses
+- **Conditional generation:** Control specific digit outputs via label conditioning
 
 ### 2. Conditional GAN (cGAN)
-- Pix2pix-style image-to-image translation framework
-- U-Net generator with skip connections for better detail preservation
-- PatchGAN discriminator for high-frequency structure evaluation
-- Application: Facade generation from segmentation masks
+- Pix2pix-style image-to-image translation
+- U-Net generator with skip connections for detail preservation
+- PatchGAN discriminator for high-frequency structure
+- **Application:** Facade generation from segmentation masks
 
 ### 3. Diffusion Models (DDPM)
-- Implementation of denoising diffusion probabilistic models
-- Progressive noise addition and denoising process
-- UNet2DModel architecture with timestep embeddings
-- Comparison of denoising steps (see `fantasy_landscape_5.png` vs `fantasy_landscape_40.png`)
+- Denoising diffusion probabilistic model implementation
+- Progressive noise addition and denoising
+- UNet2DModel with timestep embeddings
+- **Comparison:** Quality improvement with more denoising steps
 
 ### 4. Advanced Text-to-Image Generation
-- Integration with StableDiffusion3.5 for text-prompted image creation
-- Custom prompt engineering for creative image generation
-- High-quality outputs for various domains (landscapes, portraits, cityscapes)
+- Integration with Stable Diffusion 3.5
+- Custom prompt engineering for creative outputs
+- High-quality images across domains (landscapes, portraits, cityscapes)
 
-## Generated Images
+---
+
+## Results
 
 | Image | Description |
 |-------|-------------|
-| [Fantasy Landscape (5 steps)](fantasy_landscape_5.png) | Fantasy landscape generated with just 5 denoising steps |
-| [Fantasy Landscape (40 steps)](fantasy_landscape_40.png) | Same prompt with 40 denoising steps showing quality improvement |
-| [Cyberpunk City](futuristic_cyberpunk_city.png) | Detailed futuristic cityscape with cyberpunk aesthetics |
-| [Realistic Portrait](realistic_portrait.png) | Photorealistic human portrait generation |
+| ![Fantasy Landscape (5 steps)](fantasy_landscape_5.png) | Fantasy landscape, 5 denoising steps |
+| ![Fantasy Landscape (40 steps)](fantasy_landscape_40.png) | Same prompt, 40 steps (higher quality) |
+| ![Cyberpunk City](futuristic_cyberpunk_city.png) | Futuristic cityscape, cyberpunk style |
+| ![Realistic Portrait](realistic_portrait.png) | Photorealistic human portrait |
+
+---
 
 ## Technical Details
 
-The complete implementation details, code, and training procedures can be found in the [GAN_and_Diffusion.ipynb](GAN_and_Diffusion.ipynb) notebook, which contains:
-- Model architectures and hyperparameters
-- Training loops and optimization techniques
+All code, model architectures, and training procedures are in [GAN_and_Diffusion.ipynb](GAN_and_Diffusion.ipynb):
+- Model definitions and hyperparameters
+- Training loops and optimizers
 - Visualization of generation processes
-- Comparative analysis of different approaches
+- Comparative analysis and ablation studies
+
+---
 
 ## Skills Demonstrated
-
-- Deep understanding of multiple generative model architectures
+- Deep understanding of generative model architectures
 - PyTorch implementation of complex neural networks
-- Hyperparameter tuning for optimal generation quality
-- Working with conditional inputs for controlled generation
+- Hyperparameter tuning for optimal results
+- Conditional and controllable generation
 - Integration with pre-trained diffusion models
-- Image processing and quality evaluation
+- Image processing and evaluation
+
+---
 
 ## Text Prompts
 
-Custom text prompts used for the diffusion model generations can be found in [prompts.md](prompts.md).
+Custom prompts for diffusion models are in [prompts.md](prompts.md).
+
+---
 
 Stevan Le Stanc
